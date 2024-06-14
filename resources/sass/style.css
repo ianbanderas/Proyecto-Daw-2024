@@ -1,0 +1,9 @@
+h1 {
+  color: red;
+}
+
+#coco {
+  background-image: url("../img/descarga.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=style.css.map */
