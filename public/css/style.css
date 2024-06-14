@@ -1,0 +1,347 @@
+body {
+  margin: 0;
+}
+
+.boxperfil {
+  height: 18%;
+  display: flex;
+  font-size: 1rem;
+  border: 1px solid black;
+  background-color: #a0b5c9;
+  color: black;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  margin: 5px auto;
+  width: 75%;
+}
+.boxperfil h4 {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin-left: 1%;
+  margin-bottom: 0%;
+  margin-top: 5px;
+}
+.boxperfil .sub {
+  text-decoration: underline;
+}
+.boxperfil .sub2 {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: 5px;
+}
+.boxperfil a {
+  width: 100%;
+  text-align: center;
+  margin: auto 0;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #5f4a36;
+  border: 2px solid black;
+  height: 8vh;
+  justify-content: space-between;
+  margin-top: 0;
+}
+header select {
+  margin-left: 10px;
+}
+header button {
+  width: 4rem;
+}
+header .separar {
+  display: flex;
+  width: auto;
+}
+
+footer {
+  height: 4vh;
+  border: 2px solid black;
+  margin: 0;
+  background-color: #5f4a36;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.flex-container {
+  background: rgba(95, 74, 54, 0.6);
+  width: 100%;
+  height: 86.5vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 3rem 0;
+  row-gap: 5px;
+}
+.flex-container .pag {
+  color: #a0b5c9;
+}
+.flex-container .box2 {
+  align-content: center;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  justify-self: flex-start;
+  margin: 5px auto;
+  text-align: center;
+  width: 100%;
+}
+.flex-container .box2 p {
+  margin: 0;
+}
+.flex-container .box {
+  background-color: #a0b5c9;
+  width: 80%;
+}
+.flex-container .box table {
+  color: #5f4a36;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: solid #5f4a36 5px;
+  height: 100%;
+}
+.flex-container .box table th {
+  height: 10%;
+}
+.flex-container .box table th,
+.flex-container .box table td {
+  border: double #5f4a36 3px;
+}
+.flex-container .box table .enlace {
+  width: 10%;
+}
+.flex-container .box2 {
+  align-content: center;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  justify-self: flex-start;
+  margin: 5px auto;
+  text-align: center;
+  width: 100%;
+}
+.flex-container .box2 p {
+  margin: 0;
+}
+
+.button_a {
+  display: flex;
+  width: 5rem;
+  height: 6vh;
+  border: 1px solid black;
+  border-radius: 35%;
+  background-color: #a0b5c9;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  padding: 2px;
+  margin-left: 1vh;
+}
+.button_a p {
+  display: flex;
+  margin: 0px auto;
+  height: 6vh;
+  width: 100%;
+  line-height: 6vh;
+  text-align: center;
+  font-size: 1rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.button_b {
+  background-color: #a0b5c9;
+  border: 1px solid black;
+  width: auto;
+  height: 6vh;
+  line-height: 6vh;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.br {
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+.br form {
+  width: auto;
+}
+.br label {
+  margin: 5px auto;
+  font-weight: bold;
+}
+
+.start {
+  background: rgba(95, 74, 54, 0.6);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  row-gap: 5px;
+  height: 87vh;
+}
+.start span,
+.start p {
+  color: #5f4a36;
+}
+.start .box {
+  display: flex;
+  align-content: center;
+  background-color: #a0b5c9;
+  border: solid #5f4a36 1px;
+  font-size: 1rem;
+  justify-content: center;
+  margin: 5px auto;
+  padding: 0.5rem;
+  text-align: center;
+  width: 75%;
+}
+.start .box textarea {
+  background-color: #a0b5c9;
+  resize: none;
+  width: 60%;
+}
+.start .box h4 {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  width: 25%;
+}
+.start .box .sub {
+  text-decoration: underline;
+}
+.start .box .sub2 {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  margin: 5px;
+  width: 40%;
+}
+.start .box a {
+  margin-bottom: 5px;
+  margin: auto 0;
+  text-align: center;
+  width: 100%;
+}
+.start .box2 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.flex-container2 {
+  display: flex;
+  align-content: center;
+  background: rgba(95, 74, 54, 0.6);
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 86.5vh;
+  margin: 0 auto;
+  row-gap: 5px;
+  width: 100%;
+}
+.flex-container2 .pla {
+  align-content: center;
+  background-color: #a0b5c9;
+  border: 1px solid black;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 1rem;
+  height: 40%;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 5px auto;
+  padding-bottom: 4px;
+  text-align: center;
+  width: 75%;
+}
+.flex-container2 .pla table {
+  width: 100%;
+}
+.flex-container2 .pla table .td1 {
+  width: 25%;
+}
+.flex-container2 .pla table .td2 {
+  width: 50%;
+}
+.flex-container2 .pla table .td3 {
+  width: 25%;
+}
+.flex-container2 .pla .sub {
+  text-decoration: underline;
+}
+.flex-container2 .pla .sub2 {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: 5px;
+}
+.flex-container2 .pla a {
+  width: 100%;
+  text-align: center;
+  margin: auto 0;
+  margin-bottom: 5px;
+}
+
+a, span, h1, .a-color, p, select, button, input, td, th, i {
+  color: #5f4a36;
+}
+
+button {
+  background-color: #a0b5c9;
+  border: solid 1px;
+}
+
+.log {
+  background-color: #a0b5c9;
+}
+
+#coco {
+  background-image: url("../images/fondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.myImage {
+  height: 10em;
+  width: 10em;
+  background-size: cover;
+  background-image: url("../images/dibujo.png");
+  background-repeat: no-repeat;
+}
+
+.myImageNav {
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  background-image: url("../images/dibujo.png");
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'restaurante';
+@import 'start';
+@import 'plato';
+@import 'login';
+
+a,span,h1,.a-color,p,select,button,input,td,th,i {
+    color: $hiper;
+}
+button{
+    background-color: $celeste;
+    border: solid 1px;
+}
+
+.log {
+    background-color: $celeste;
+}
+
+#coco {
+    background-image: url("../images/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.myImage {
+    height: 10em;
+    width: 10em;
+    background-size: cover;
+    background-image: url("../images/dibujo.png");
+    background-repeat: no-repeat;
+}
+
+
+.myImageNav {
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-image: url("../images/dibujo.png");
+    background-repeat: no-repeat;
+}

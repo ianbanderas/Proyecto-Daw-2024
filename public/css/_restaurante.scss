@@ -1,0 +1,223 @@
+@import 'variables';
+
+body {
+    margin: 0;
+}
+
+.boxperfil {
+
+    height: 18%;
+    display: flex;
+    font-size: 1rem;
+    border: $border;
+    background-color: $celeste;
+    color: black;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    margin: 5px auto;
+    width: 75%;
+
+    h4 {
+
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        margin-left: 1%;
+        margin-bottom: 0%;
+        margin-top: 5px;
+    }
+
+    .sub {
+        text-decoration: underline;
+    }
+
+    .sub2 {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        width: 40%;
+        margin: 5px;
+    }
+
+    a {
+        width: 100%;
+        text-align: center;
+        margin: auto 0;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+header {
+    select {
+        margin-left: 10px;
+    }
+
+    button {
+        width: 4rem;
+    }
+
+    .separar {
+        display: flex;
+        width: auto;
+    }
+
+    display: flex;
+
+    align-items: center;
+    background-color: $marron;
+    border: 2px solid black;
+    height: 8vh;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+footer {
+    height: 4vh;
+    border: 2px solid black;
+    margin: 0;
+    background-color: $marron;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.flex-container {
+    background: $marronTransparente;
+    width: 100%;
+    height: 86.5vh;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 3rem 0;
+    row-gap: 5px;
+
+    .pag{
+        color: $celeste;
+    }
+    .box2 {
+        align-content: center;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        font-weight: 600;
+        justify-content: center;
+        justify-self: flex-start;
+        margin: 5px auto;
+        text-align: center;
+        width: 100%;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .box {
+        background-color: $celeste;
+        width: 80%;        
+
+        table {
+            color: $marron;
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            border: solid $marron 5px;
+            th {
+                height: 10%;
+            }
+            th,
+            td {
+                border: double $marron 3px;
+            }
+
+            .enlace{
+                width: 10%;
+            }
+            height: 100%;
+        }
+    }
+
+    .box2 {
+        align-content: center;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        font-weight: 600;
+        justify-content: center;
+        justify-self: flex-start;
+        margin: 5px auto;
+        text-align: center;
+        width: 100%;
+
+        p {
+            margin: 0;
+
+        }
+    }
+}
+
+
+
+.button_a {
+    p {
+        display: flex;
+        margin: 0px auto;
+        height: 6vh;
+        width: 100%;
+        line-height: 6vh;
+        text-align: center;
+        font-size: 1rem;
+
+        justify-content: center;
+        align-content: center;
+    }
+
+    display: flex;
+    width: 5rem;
+    height: 6vh;
+    border: $border;
+    border-radius: 35%;
+    background-color: $celeste;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 2px;
+    margin-left: 1vh;
+}
+
+.button_b {
+    background-color: $celeste;
+    border: $border;
+    width: auto;
+    height: 6vh;
+    line-height: 6vh;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.br {
+    form {
+        width: auto;
+    }
+
+    label {
+        margin: 5px auto;
+        font-weight: bold;
+    }
+
+    height: auto;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
