@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "granaina";
+  src: url("assets/fonts/GranainaFont/granaina-limpia.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "knile";
+  src: url("assets/fonts/Knile-Regular-Italic/Knile-Regular-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "knile";
+}
+
+h2, h1 {
+  font-family: "granaina";
+}
+
+.error {
+  border-radius: 5px;
+  padding: 4px;
+}
+
+:root {
+  --celeste: #a0b5c9;
+  --celesteTransparente: rgba(160, 181, 201, 0.8);
+  --marron: #5f4a36;
+  --marronTransparente: rgba(95, 74, 54, 0.6);
+  --letracolor: #3d2f22;
+  --rojoBandera: "rgb(210, 46, 46)";
+}
+
+table {
+  background-color: var(--celeste);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--marronTransparente);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: var(--celeste);
+  background-color: var(--marron);
+}
+
+#canvas {
+  border: 1px solid #000000;
+  width: 40px;
+  height: 30px;
+}/*# sourceMappingURL=styles.css.map */
