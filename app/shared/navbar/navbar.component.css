@@ -1,0 +1,32 @@
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+h3 {
+  color: var(--celeste);
+  font-family: "granaina";
+}
+
+.container {
+  background-color: var(--marron);
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+  color: var(--marron);
+}
+.container .botones {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--marron);
+}
+
+.active {
+  color: yellow;
+}/*# sourceMappingURL=navbar.component.css.map */

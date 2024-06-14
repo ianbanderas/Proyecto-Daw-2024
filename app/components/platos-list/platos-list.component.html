@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="cards">
+        @for(plato of platos; track plato.idPla){
+        <card-plato [plato]="plato" [idRes]="idRes"/>
+        }@empty{
+        <h3 class="mensajeVacio"><shared-lang texto="noPla" /></h3>
+        }
+    </div>
+
+    
+
+    <p>
+        @if(_platos.length > platosVisibles){
+        @if(paginaActual != 1){
+        <span (click)="actualizarTabla(paginaActual - 1)">&lt;</span>
+        }
+        @for(value of spanValues; track value; let last = $last){
+            @if(value == paginaActual){
+            <span id="paginas" (click)="actualizarTabla(value)"> <b>{{ value }}</b></span>
+            }
+            @else{
+            <span id="paginas" (click)="actualizarTabla(value)"> {{ value }}</span>
+            }
+            @if(!last) {
+            <span> | </span>
+            }
+        }
+        @if(paginaActual != ultimaPagina){
+        <span (click)="actualizarTabla(paginaActual + 1)"> &gt;</span>
+        }
+        }
+    </p>
+</div>

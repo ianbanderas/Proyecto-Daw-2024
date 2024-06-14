@@ -1,0 +1,54 @@
+.container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+form {
+    color: var(--marron);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background-color: var(--celeste);
+
+    .input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    select,
+    textarea {
+        color: var(--marron);
+    }
+
+    select {
+        text-align: center;
+    }
+
+    button {
+        &:hover {
+            background-color: var(--marron);
+            color: var(--celeste);
+            cursor: pointer;
+        }
+
+        &:disabled {
+            background-color: var(--celeste);
+            color: grey;
+            cursor: initial;
+
+        }
+
+        color: var(--marron);
+        background-color: var(--celeste);
+
+    }
+}
+
+textarea {
+    resize: none;
+}

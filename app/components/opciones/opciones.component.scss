@@ -1,0 +1,76 @@
+.container {
+    color: var(--marron);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 80vh;
+    min-width: 300px;
+    width: 100vw;       
+    color: var(--marron);
+
+
+    .formulario {
+        background-color: var(--celeste);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+        justify-content: space-around;
+        padding: 1rem;
+        color: var(--marron);
+        select{
+            color: var(--marron);
+
+        }
+       
+        .inputs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            justify-content: space-around;
+           
+        }
+    }
+}
+.enlace{
+    cursor: pointer;
+}
+.containerFormulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.1rem;
+}
+button{
+    &:hover{
+        background-color: var(--marron); 
+        color: var(--celeste);
+    }  
+    &:disabled{
+        background-color: var(--celeste);
+        color: var(--marron);
+    } 
+    color: var(--marron);  
+    background-color: var(--celeste); 
+    cursor: pointer;
+
+}
+.svg{
+    border: none;
+    &:hover{
+        background-color: transparent; 
+    }
+}
+#flechaIzq,#flechaDer,#paginas{
+    &:hover{
+        text-decoration-line: underline;
+    }
+}
+shared-lang.enlace{
+
+        &:hover{
+            text-decoration-line: underline;
+        }
+    
+}

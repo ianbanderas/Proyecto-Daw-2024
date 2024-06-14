@@ -1,0 +1,7 @@
+<div class="card">
+    <h1>{{plato!.nombre}}</h1>
+
+    <textarea>{{plato!.descripcion}}</textarea>
+
+    <span [routerLink]="['/plato', idRes, plato!.idPla]"><shared-lang texto="see" /></span>
+</div>

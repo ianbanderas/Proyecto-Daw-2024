@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="botones">
+        <shared-boton texto="menu" [routerLink]="['/menu', idRes]" />
+        @if(idUsuario === idUsuRes){
+            <shared-boton texto="upPla" [routerLink]="['/plato', 'update', idRes, idPla]" />
+            <shared-boton texto="delete" (click)="deletePlato()" />
+        }
+
+    </div>
+
+    <div class="plato">
+        <div class="info">
+            <p>
+                {{plato!.nombre}}
+                <br>
+            {{plato!.descripcion}}
+
+                
+            </p>
+        </div>
+        <hr>
+        <div class="opinion">
+            {{plato!.comentario}}
+            <br>
+            @for(estrella of estrellas; track $index){
+                @if(estrella){
+                    <i class="bi bi-star-fill"></i>
+                } @else{
+                    <i class="bi bi-star"></i>
+                }
+
+            }
+            
+
+        </div>
+
+    </div>
+
+</div>

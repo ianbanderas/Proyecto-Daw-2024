@@ -1,0 +1,27 @@
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--celeste);
+    border-radius: 6px;
+    padding: 1vw;
+    color: var(--marron);
+    width: 150px;
+    height: 250px;
+   
+    textarea{
+        background-color: var(--celeste);
+        resize: none;
+        color: var(--marron);
+        border:none;
+        height: 150px;
+    }
+
+    span {
+        cursor: pointer;
+        align-self: end;
+        &:hover{
+            text-decoration-line: underline;
+        }
+    }
+}

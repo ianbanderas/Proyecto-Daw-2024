@@ -1,0 +1,64 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formulario {
+  background-color: rgba(160, 181, 201, 0.8);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.4rem;
+  color: var(--marron);
+  height: 15rem;
+}
+.formulario .etiqueta {
+  display: flex;
+  flex-direction: column;
+}
+.formulario .etiqueta input {
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 14px;
+  min-width: 40vw;
+  max-width: 80vw;
+}
+.formulario .botones {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+  padding-left: 0.1rem;
+  justify-content: space-between;
+}
+.formulario .botones .admin {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.formulario .botones span {
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+.formulario .botones span:hover {
+  text-decoration-line: underline;
+}
+.formulario .botones button {
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+  color: var(--marron);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.formulario .botones button:disabled {
+  cursor: initial;
+}
+.formulario .botones button:hover {
+  text-decoration-line: underline;
+  background-color: var(--marron);
+  color: var(--celeste);
+}/*# sourceMappingURL=login.component.css.map */

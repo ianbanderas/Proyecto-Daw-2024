@@ -1,0 +1,42 @@
+
+<div class="container">
+    <span>
+        <img (click)="animacionLogo($event)" src="assets/logo/dibujo1.png" width="120px" height="120px" alt="Logo">
+    </span>
+    
+    <form class="formulario" [formGroup]="form" (ngSubmit)="submitSignup()">
+        <div class="etiqueta">
+            <label for="nombre"><shared-lang texto="Name" /></label>
+            <input id="nombre" type="text" placeholder="{{'Name'|translate:selected()}}" formControlName="nombre">
+            @if(form.controls['nombre'].touched && !form.controls['nombre'].valid){
+            <span class="error"><shared-lang texto="Obligatorio" /></span>
+            }
+        </div>
+        <div class="etiqueta">
+            <label for="password"><shared-lang texto="Password" /></label>
+            <input id="password" type="password" placeholder="{{'Password'|translate:selected()}}"
+                formControlName="password">
+            @if(form.controls['password'].touched && !form.controls['password'].valid){
+            <span class="error"><shared-lang texto="Obligatorio" /></span>
+            }
+
+        </div>
+        <div class="etiqueta">
+            <label for="password_confirm"><shared-lang texto="Confirm Password" /></label>
+            <input id="password_confirm" type="password" placeholder="{{'Confirm Password'|translate:selected()}}"
+                formControlName="confirm">
+            @if(form.controls['confirm'].touched && !form.controls['confirm'].valid){
+            <span class="error"><shared-lang texto="coincide" /></span>
+
+            }
+
+        </div>
+        <div class="botones">
+            <bandera />
+            <div>
+                <span [routerLink]="['/login']"><shared-lang texto="Already registered?" /></span>
+                <button type="submit" [disabled]="!form.valid"><shared-lang texto="Register" /></button>
+            </div>
+        </div>
+    </form>
+</div>

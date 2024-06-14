@@ -1,0 +1,32 @@
+.container {
+    align-items: center;
+    color: var(--marron);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 80vh;
+    justify-content: center;
+    min-width: 300px;
+    padding: 1vw;
+    width: 100vw;
+    .botones{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .plato {
+        background-color: var(--celeste);
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        max-width: 80%;
+        hr{
+            width: 100%;
+        }
+        .opinion {
+            align-self: center;
+        }
+    }
+
+}

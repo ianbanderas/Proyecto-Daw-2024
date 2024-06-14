@@ -1,0 +1,54 @@
+<div class="container">
+
+    <form [formGroup]="form" class="central" (change)="actualizarRestaurantes($event)">
+
+        <select name="categoria" formControlName="categoria">
+            <option value="0" selected disabled>--<shared-lang texto="category" />--</option>
+            @for(categoria of categorias; track categoria; let i = $index){
+            <option value="{{categoria}}">{{categoria}}</option>
+            }
+        </select>
+
+        <button class="reset" type="button" (click)="reset()"><shared-lang texto="reset"/></button>
+
+        <select name="ciudad" formControlName="ciudad">
+            <option value="0" selected disabled>--<shared-lang texto="city" />--</option>
+            @for(ciudad of ciudades; track ciudad; let i = $index){
+            <option value="{{ciudad.idCiu}}">{{ciudad.nombre}}</option>
+            }
+        </select>
+
+    </form>
+
+    <div class="cards">
+        @for(restaurante of restaurantes; track restaurante.idRes){
+        <card-restaurante [restaurante]=restaurante />
+        } @empty{
+        <h3 class="mensajeVacio"><shared-lang texto="noRest" /></h3>
+        }
+    </div>
+
+    <p>
+        @if(restaurantesCargados.length > restaurantesVisibles){
+        @if(paginaActual != 1){
+        <span id="flechaIzq" (click)="actualizarTabla(paginaActual - 1)">&lt;</span>
+        }
+        @for(value of spanValues; track value; let last = $last){
+        @if(value == paginaActual){
+        <span id="paginas" (click)="actualizarTabla(value)"> <b>{{ value }}</b></span>
+        }
+        @else{
+        <span id="paginas" (click)="actualizarTabla(value)"> {{ value }}</span>
+        }
+        @if(!last) {
+        <span> | </span>
+        }
+        }
+        @if(paginaActual != ultimaPagina){
+        <span id="flechaDer" (click)="actualizarTabla(paginaActual + 1)"> &gt;</span>
+        }
+        }
+    </p>
+
+
+</div>

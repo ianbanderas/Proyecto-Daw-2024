@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  background-color: var(--celeste);
+  border-radius: 6px;
+  padding: 0.3rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 150px;
+  height: 250px;
+}
+.card .enlace {
+  cursor: pointer;
+  align-self: flex-end;
+}
+.card .enlace:hover {
+  text-decoration-line: underline;
+}/*# sourceMappingURL=card-restaurante.component.css.map */

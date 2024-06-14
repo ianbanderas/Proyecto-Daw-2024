@@ -1,0 +1,53 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formulario {
+  background-color: rgba(160, 181, 201, 0.8);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  color: var(--marron);
+}
+.formulario .etiqueta {
+  display: flex;
+  flex-direction: column;
+}
+.formulario .etiqueta input {
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 14px;
+  min-width: 40vw;
+  max-width: 80vw;
+}
+.formulario .botones {
+  align-items: center;
+  display: flex;
+  padding-top: 0.5rem;
+  padding-left: 0.1rem;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.formulario .botones span {
+  cursor: pointer;
+  padding-right: 0.2rem;
+}
+.formulario .botones span:hover {
+  text-decoration-line: underline;
+}
+.formulario .botones button {
+  background-color: var(--marron);
+  border: none;
+  border-radius: 5px;
+  color: var(--celeste);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.formulario .botones button:disabled {
+  background-color: grey;
+  cursor: initial;
+}/*# sourceMappingURL=registro.component.css.map */

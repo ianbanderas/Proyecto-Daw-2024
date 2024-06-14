@@ -1,0 +1,46 @@
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+form {
+  color: var(--marron);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background-color: var(--celeste);
+}
+form .input {
+  display: flex;
+  flex-direction: column;
+}
+form input,
+form select,
+form textarea {
+  color: var(--marron);
+}
+form select {
+  text-align: center;
+}
+form button {
+  color: var(--marron);
+  background-color: var(--celeste);
+}
+form button:hover {
+  background-color: var(--marron);
+  color: var(--celeste);
+  cursor: pointer;
+}
+form button:disabled {
+  background-color: var(--celeste);
+  color: grey;
+  cursor: initial;
+}
+
+textarea {
+  resize: none;
+}/*# sourceMappingURL=add-plato.component.css.map */

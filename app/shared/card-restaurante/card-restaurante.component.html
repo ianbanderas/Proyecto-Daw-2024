@@ -1,0 +1,7 @@
+<div class="card">
+    <h2>{{ restaurante?.nombre }}</h2>
+    <p>Restaurante <b>{{ restaurante?.categoria }}</b> en la ciudad de <b>{{ restaurante?.idCiu }}</b></p>
+    @if(restaurante){
+    <span class="enlace" [routerLink]="['/menu', restaurante.idRes]"><shared-lang texto="menu" /></span>
+    }
+</div>

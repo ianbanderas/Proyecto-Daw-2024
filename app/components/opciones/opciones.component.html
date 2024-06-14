@@ -1,0 +1,99 @@
+<div class="container">
+    <div class="containerBotones">
+        <button (click)="agregarRestaurante = !agregarRestaurante"><shared-lang texto="addRest" /></button>
+        <button (click)="cambiarPassword = !cambiarPassword"><shared-lang texto="resPass" /></button>
+    </div>
+
+    <div class="containerFormulario">
+        @if(agregarRestaurante){
+        <form class="formulario" [formGroup]="formRestaurante">
+            <div class="inputs">
+
+                <input type="text" formControlName="nombre" placeholder="{{ 'Name' |translate:selected()}}">
+
+                <select style="color: 'red'" name="ciudad" formControlName="idCiu">
+                    <option value="0" selected disabled>--<shared-lang texto="city" />--</option>
+                    @for(ciudad of ciudades; track ciudad; let i = $index){
+                    <option value="{{ciudad.idCiu}}">{{ciudad.nombre}}</option>
+                    }
+                </select>
+
+
+                <!-- <input type="text" formControlName="categoria" placeholder="{{ 'category' |translate:selected()}}"> -->
+                <select name="categoria" formControlName="categoria">
+                    <option value="0" selected disabled>--<shared-lang texto="category" />--</option>
+                    @for(categoria of categorias; track categoria; let i = $index){
+                    <option value="{{categoria}}">{{categoria}}</option>
+                    }
+                </select>
+
+            </div>
+
+            <button type="button" (click)="crearRestaurante()" [disabled]="!formRestaurante.valid">
+                <shared-lang texto="addRest" />
+            </button>
+            <!--
+            [disabled]="!formRestaurante.valid"
+
+            -->
+        </form>
+        }
+        @if(cambiarPassword){
+        <form class="formulario" [formGroup]="formPassword">
+            <input type="password" formControlName="password" placeholder="{{'newpass' |translate:selected()}}">
+            <button type="button" (click)="changePassword()" [disabled]="!formPassword.valid">
+                <shared-lang texto="Confirm Password" />
+            </button>
+        </form>
+        }
+    </div>
+
+    <table border=2>
+        <tr>
+            <th><shared-lang texto="Name" /></th>
+            <th><shared-lang texto="city" /></th>
+            <th><shared-lang texto="menu" /></th>
+            <th><shared-lang texto="addPla" /></th>
+            <th><shared-lang texto="delete" /></th>
+        </tr>
+        @for(restaurante of tablaRestaurantes; track restaurante.idRes){
+        <tr>
+            <td>{{ restaurante.nombre }}</td>
+            <td>{{ nombreCiudad(restaurante.idCiu) }}</td>
+            <td><shared-lang class="enlace" [routerLink]="['/menu', restaurante.idRes]" texto="menu" /></td>
+            <td><button class="svg" type="button" texto="addPla" [routerLink]="['/plato', 'form', restaurante.idRes]">
+                    <svg-add />
+                </button></td>
+            <td><button class="svg" type="button" (click)="confirmarBorrar('confirmDelete', restaurante.idRes)">
+                    <svg-delete />
+                </button></td>
+        </tr>
+        }@empty{
+        <tr>
+            <td colspan="5"><shared-lang texto="noRes" /></td>
+        </tr>
+        }
+
+    </table>
+    <p>
+        @if(restaurantes.length > 5){
+        @if(paginaActual != 1){
+        <span id="flechaIzq" (click)="actualizarTabla(paginaActual - 1)">&lt;</span>
+        }
+        @for(value of spanValues; track value; let last = $last){
+        @if(value == paginaActual){
+        <span id="paginas" (click)="actualizarTabla(value)"> <b>{{ value }}</b></span>
+        }
+        @else{
+        <span id="paginas" (click)="actualizarTabla(value)"> {{ value }}</span>
+        }
+        @if(!last) {
+        <span> | </span>
+        }
+        }
+        @if(paginaActual != ultimaPagina){
+        <span id="flechaDer" (click)="actualizarTabla(paginaActual + 1)"> &gt;</span>
+        }
+        }
+    </p>
+</div>

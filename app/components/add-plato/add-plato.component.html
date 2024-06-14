@@ -1,0 +1,59 @@
+<!-- <button (click)="cambiarModoPlato()">
+    {{seleccionarExistente ? "Crear Plato" : "Seleccionar Plato"}}
+</button> -->
+<div class="container">
+
+    <shared-boton (click)="cambiarModoPlato()" [texto]='seleccionarExistente ? "newPla" : "selectPla"' />
+
+    <form [formGroup]="form" (ngSubmit)="crearPlato()">
+        <!-- idRes -->
+        @if(seleccionarExistente){
+        <select name="platos" (change)="rellenarFormulario($event.target)">
+            <option value="0" selected disabled><shared-lang texto="selectPla" /></option>
+            @for(plato of allPlatos; track plato.idPla){
+            <option value="{{plato.idPla}}">{{plato.nombre}}</option>
+            }
+        </select>
+
+        } @else{
+        <!-- Plato nombre -->
+        <div class="input">
+            <label for="nombre"><shared-lang texto="nameDish" /></label>
+            <input id="nombre" formControlName="nombre" type="text" placeholder="{{'nameDish'|translate:selected()}}">
+        </div>
+
+        <!-- Plato Descripcion -->
+        <div class="input">
+            <label for="descripcion"><shared-lang texto="descDish" /></label>
+            <textarea id="descripcion" formControlName="descripcion" type="text"
+                placeholder="{{'descDish'|translate:selected()}}"></textarea>
+
+        </div>
+        }
+
+        <!--  pla_res valoracion -->
+        <div class="input">
+            <label for="valoracion"><shared-lang texto="rate" /></label>
+            <input type="number" id="valoracion" formControlName="valoracion" min="0" max="10">
+        </div>
+
+        <!-- pla_res comentario -->
+        <div class="input">
+
+            <label for="comentario"><shared-lang texto="Comment" /></label>
+            <textarea id="comentario" formControlName="comentario" type="text"
+                placeholder="{{'Comment'|translate:selected()}}"></textarea>
+        </div>
+
+        @if(seleccionarExistente){
+        <button (click)="valorarPlato()" type="button" [disabled]="!form.valid">
+            <shared-lang texto="newPla" />
+        </button>
+        }
+        @else{
+        <button (click)="crearPlato()" type="button" [disabled]="!form.valid">
+            <shared-lang texto="newPla" />
+        </button>
+        }
+    </form>
+</div>

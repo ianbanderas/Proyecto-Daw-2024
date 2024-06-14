@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="botones">
+        <!-- <canvas id="canvas" #canvas (click)="cambiarIdioma()"></canvas> -->
+        <bandera/>
+        <shared-boton routerLinkActived="active" [routerLink]="['/restaurantes']" texto="home" />
+    </div>
+
+    <div> <h3>FOOD LOVERS</h3> </div>
+
+    <div class="botones">
+        <shared-boton [routerLink]="['/opciones']" texto="profile" />
+        <shared-boton texto="logOut" (click)="logout()" />
+    </div>
+</div>
