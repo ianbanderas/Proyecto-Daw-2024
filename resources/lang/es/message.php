@@ -34,8 +34,8 @@
         "delete" => "Borrar",
         "see" => "Ver Plato",
         "sorry" => "lo sentimos no hay restaurantes en su zona, múdese o cocine",
-        "val" => "valoración"
-
+        "val" => "valoración",
+        "admin"=> "no soy admin"
         
 
 

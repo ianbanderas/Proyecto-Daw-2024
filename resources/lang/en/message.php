@@ -35,7 +35,8 @@
         "delete" => "Delete",
         "see" => "View",
         "sorry" => "sorry there are no restaurants i your area, move to another area or cook something",
-        "val" => "value"
+        "val" => "value",
+        "admin"=> "not an admin"
 
 
 
