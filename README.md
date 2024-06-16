@@ -65,5 +65,11 @@ Shared:
 	En esta carpeta se guardan los pequeños componentes que serán usados en la aplicación. Por ejemplo, elementos svg, un botón con el pipe translate o el navbar son elementos html con algunas modificaciones.
  <br>
  <br>
-DAW desplegare con AWS si es posible aunque no descarto cambiar de opinión si encuentro algo que me llame la atención, desplegare la base de datos con AWS si acabo usandolo y mirare si es posible hacer el dominio con AWS gratis.
+DI: se ha usado el preprocesador de CSS, SASS, se han elegido los colores #5f4a36 un tono de marron elegenate siendo este el color dominante junto con su color invertido #a0b5c9 que es un azul celeste claro. <br>
+
+La fuente principal usada es knile porque buscaba una fuente fina que diera la sensación de sofisticación combinada con una fuente creada por andaluces llamada granaina más llamativa para atraer la atención a los nombres y el título. <br>
+
+El login tiene de background un video en loop, el logo esta hecho con inkscape y al dar click tiene animación y reproduce sonido, en la aplicación de angular cambiara entre varias imagenes dando la sensación de ser mordido y en la vista de blade desaparecera usando anime.js, en el perfil se han usado dos icoos en svg. <br>
+ 
+DAW desplegare con AWS un EC2 para alamcenar el backend y el frontend en un bucked S3,la base de datos con AWS RDS.
 <br>
