@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
-use App\Models\usuario;
 
 class LoginRequest extends FormRequest
 {
@@ -45,30 +44,17 @@ class LoginRequest extends FormRequest
     public function authenticate()
     {
         $this->ensureIsNotRateLimited();
-        $var = $this->only('nombre');
-        $usu = Usuario::where('nombre','=',$var)->get()->first();
-        
-       
-            if (!Auth::attempt($this->only('nombre', 'password'), )) {
-                RateLimiter::hit($this->throttleKey());
-                
-                throw ValidationException::withMessages([
-                    'nombre' => trans('message.wrong user or password'),
-                ]);
-            }else{
-                if($usu->perfil == 1){
-                    RateLimiter::clear($this->throttleKey());
-                }else{
-                    
-                    Auth::logout();
-                }
 
-            }
+        if (!Auth::attempt($this->only('nombre', 'password'), $this->boolean('remember'))) {
+            RateLimiter::hit($this->throttleKey());
+
+            throw ValidationException::withMessages([
+                'nombre' => trans('message.wrong user or password'),
+            ]);
         }
-            
 
-
-    
+        RateLimiter::clear($this->throttleKey());
+    }
 
     /**
      * Ensure the login request is not rate limited.
