@@ -19,13 +19,13 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 */
 Route::get('main',[restauranteController::class,"main"])->middleware(['auth', 'verified'])->name("main");
 
-Route::post('registrar', [RegisteredUserController::class, 'store'])->name("registrar");
+//Route::post('registrar', [RegisteredUserController::class, 'store'])->name("registrar");
 
 Route::get('/', function () {
     return redirect('login');
 })->middleware('translate');
-Route::get('borrar/{idRes}',[restauranteController::class,"borrar"])->middleware('translate')->name("borrar");
-Route::get('addRes',[restauranteController::class,"add"])->middleware('translate')->name("addRes");
+Route::get('borrar/{idRes}',[restauranteController::class,"borrar"])->middleware(['translate', 'auth', 'verified'])->name("borrar");
+Route::get('addRes',[restauranteController::class,"add"])->middleware(['translate', 'auth', 'verified'])->name("addRes");
 
 Route::get('/dashboard', function () {
     return redirect('main');
@@ -36,15 +36,15 @@ Route::get('/out', function () {
     return redirect('login');
 })->middleware('translate')->name('out');
 
-Route::get('profile',[profileController::class,"main"])->name("profile");
+//Route::get('profile',[profileController::class,"main"])->name("profile");
 
-Route::get('changePass',[profileController::class,"changePass"])->middleware('translate')->name("changePass");
+//Route::get('changePass',[profileController::class,"changePass"])->middleware('translate')->name("changePass");
 
 Route::get('menu/{idRes}',[menuController::class,"main"])->middleware(['translate', 'auth', 'verified'])->name("menu");
 
-Route::get('addPla',[menuController::class,"add"])->middleware('translate')->name("addPla");
+Route::get('addPla',[menuController::class,"add"])->middleware(['translate', 'auth', 'verified'])->name("addPla");
 
-Route::get('verPlato',[menuController::class,"verPlato"])->middleware('translate')->name("verPlato");
+Route::get('verPlato',[menuController::class,"verPlato"])->middleware(['translate', 'auth', 'verified'])->name("verPlato");
 
 Route::get('cambiarIdioma', function(){
   // Session::put('language',"en");
