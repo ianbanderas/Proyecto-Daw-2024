@@ -26,7 +26,8 @@ En el perfil puedes entrar para modificar datos, acceder a tus restaurantes dond
 
 Dentro del menu puedes ver los distintos platos dentro del restaurante o entrar al plato en cuestión donde si eres el dueño edl restaurante puedes actualizarlo o borrarlo. <br>
 
-DWEC Para el desarrollo del front se ha seleccionado el framework de Angular, se ha usado la versión 17.1.
+DWEC:<br>
+Para el desarrollo del front se ha seleccionado el framework de Angular, se ha usado la versión 17.1.
  <br>El proyecto se ha estructurado de la siguiente manera:
  <br>
 Components: 
@@ -65,7 +66,8 @@ Shared:
 	En esta carpeta se guardan los pequeños componentes que serán usados en la aplicación. Por ejemplo, elementos svg, un botón con el pipe translate o el navbar son elementos html con algunas modificaciones.
  <br>
  <br>
-DI: se ha usado el preprocesador de CSS, SASS, se han elegido los colores #5f4a36 un tono de marron elegenate siendo este el color dominante junto con su color invertido #a0b5c9 que es un azul celeste claro. <br>
+DI: <br>
+se ha usado el preprocesador de CSS, SASS, se han elegido los colores #5f4a36 un tono de marron elegenate siendo este el color dominante junto con su color invertido #a0b5c9 que es un azul celeste claro. <br>
 
 La fuente principal usada es knile porque buscaba una fuente fina que diera la sensación de sofisticación combinada con una fuente creada por andaluces llamada granaina más llamativa para atraer la atención a los nombres y el título. <br>
 
