@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string("comentario",255);
         });
         Schema::table("restaurante",function($table) {
-            $table->foreign("idRes")->references("idRes")->on("restaurante");
-            $table->foreign("idPla")->references("idPla")->on("platos");
+            $table->foreign("idRes")->references("idRes")->on("restaurante")->onDelete('cascade');
+            $table->foreign("idPla")->references("idPla")->on("platos")->onDelete('cascade');
         });
     }
 

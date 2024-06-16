@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ciudad', function (Blueprint $table) {
             $table->increments("idCiu");
-            $table->unique("nombre",100);
+            $table->string("nombre",100)->unique();
         });
     }
 

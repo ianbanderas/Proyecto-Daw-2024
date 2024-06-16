@@ -18,7 +18,7 @@ class platosFactory extends Factory
     {
         return [
             "idPla" => $this->faker->unique()->numberBetween(1,10),
-            "nombre" => $this->faker->word(),
+            "nombre" => $this->faker->unique()->word(),
             "descripcion" => $this->faker->sentence(),
 
             

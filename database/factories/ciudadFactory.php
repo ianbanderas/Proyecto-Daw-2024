@@ -18,7 +18,7 @@ class ciudadFactory extends Factory
     {
         return [
             "idCiu" => $this->faker->unique()->numberBetween(1,10),
-            "nombre" => $this->faker->word(),
+            "nombre" => $this->faker->unique()->word(),
         ];
     }
 }

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('usuario', function (Blueprint $table) {
             $table->increments("idUsu");
-            $table->unique("nombre");
+            $table->string("nombre")->unique();
             $table->string("password",100);
             $table->integer('perfil')->default('2');
         });

@@ -18,7 +18,7 @@ class restauranteFactory extends Factory
     {
         return [
             "idRes" => $this->faker->unique()->numberBetween(1,10),
-            "nombre" => $this->faker->word(),  
+            "nombre" => $this->faker->unique()->word(),  
             "categoria" => $this->faker->word(),  
             "idUsu" => $this->faker->numberBetween(1,10),
             "idCiu" => $this->faker->numberBetween(1,10),

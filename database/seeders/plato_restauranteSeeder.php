@@ -18,7 +18,7 @@ class plato_restauranteSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for($i=0;$i<3;$i++) {
+        for($i=0;$i<12;$i++) {
         DB::table("plato_restaurante")->insert([
             "idPla" => $faker->numberBetween(1,10),
             "idRes" => $faker->numberBetween(1,10),
@@ -26,6 +26,5 @@ class plato_restauranteSeeder extends Seeder
             "comentario" => $faker->word(),
         ]);
         }
-
     }
 }

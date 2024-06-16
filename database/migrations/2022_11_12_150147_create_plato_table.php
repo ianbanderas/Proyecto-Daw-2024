@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('plato', function (Blueprint $table) {
             $table->increments("idPla");
-            $table->unique("nombre",100);
+            $table->string("nombre",100)->unique();
             $table->text("descripcion");
         });
     }

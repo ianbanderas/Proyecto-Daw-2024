@@ -19,9 +19,9 @@ class usuarioFactory extends Factory
     {
         return [
             "idUsu" => $this->faker->unique()->numberBetween(1,10),
-            "nombre" => $this->faker->word(),  
+            "nombre" => $this->faker->unique()->word(),  
             "password" => Hash::make(1234),
-            "perfil" => $this->faker->numberBetween(1,3),
+            "perfil" => $this->faker->numberBetween(1,2),
 
         ];
     }

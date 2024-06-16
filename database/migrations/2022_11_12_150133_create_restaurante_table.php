@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('restaurante', function (Blueprint $table) {
             $table->increments("idRes");
-            $table->unique("nombre",100);
-            $table->unique("categoria",100);
+            $table->string("nombre",100)->unique();
+            $table->string("categoria",100);
             $table->unsignedInteger("idUsu");
             $table->unsignedInteger("idCiu");
         });
         Schema::table("restaurante",function($table) {
-            $table->foreign("idUsu")->references("idUsu")->on("usuario");
-            $table->foreign("idCiu")->references("idCiu")->on("ciudad");
+            $table->foreign("idUsu")->references("idUsu")->on("usuario")->onDelete('cascade');
+            $table->foreign("idCiu")->references("idCiu")->on("ciudad")->onDelete('cascade');
         });
     
     }
