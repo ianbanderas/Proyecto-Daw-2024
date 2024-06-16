@@ -86,7 +86,7 @@ export class LoginComponent {
       audio.play();
     for (let i = 1; i < 6; i++) {
       setTimeout(() => {
-        event.target["src"] = "http://localhost:4200/assets/logo/dibujo" + ((i) % 4 + 1) + ".png";
+        event.target["src"] = "http://localhost:4200/assets/logo/dibujo" + ((i) % 5 + 1) + ".png";
       }, 300 * i)
     }
 
