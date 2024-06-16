@@ -18,7 +18,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 |
 */
 Route::get('main',[restauranteController::class,"main"])->middleware(['auth', 'verified'])->name("main");
-
+Route::get('volver',[restauranteController::class,"volver"])->name("volver");
 //Route::post('registrar', [RegisteredUserController::class, 'store'])->name("registrar");
 
 Route::get('/', function () {
