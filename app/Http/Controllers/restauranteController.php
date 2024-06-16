@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use App\Models\restaurante;
 use App\Models\ciudad;
 use App\Models\usuario;
@@ -18,6 +19,9 @@ class restauranteController extends Controller
     function index3(){return platos::all();}
     function index4(){return usuario::all();}
 
+    function volver(){
+        return Redirect::to("http://localhost:4200/");
+    }
 
     function main ($r=null){
         if($r==null){
