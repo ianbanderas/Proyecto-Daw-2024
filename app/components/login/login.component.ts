@@ -43,13 +43,8 @@ export class LoginComponent {
             next: (nuevoUsuario: any) => {
               this.usuario$.usuario.set(nuevoUsuario)
               localStorage.setItem('usuario', JSON.stringify(nuevoUsuario));
-
-              if (nuevoUsuario.perfil === 2) {
-                localStorage.removeItem('usuario');
-                localStorage.removeItem('token');
-              } else {
                 this.router.navigateByUrl("/restaurantes");
-              }
+              
 
             }
           }
