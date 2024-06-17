@@ -69,7 +69,12 @@ export class RegistroComponent {
     }
 
     handleError(error: any) {
-        console.log(error);
+        console.log("asdasdasd");
+        if(this.idioma$.idiomaSelect() == 1){
+            alert(this.idioma$.ENG.get("nosuccess"));
+        } else {
+            alert(this.idioma$.ESP.get("nosuccess"));
+        }
     }
 
     
