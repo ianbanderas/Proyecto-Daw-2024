@@ -74,11 +74,21 @@ export default class AddPlatoComponent implements OnInit {
             alert("Se creó con éxito.");
             this.form.reset();
           },
-          error: (e) => console.log(e)
+         error: () => this.handleError()
         });
       },
-      error: (e) => console.log(e)
+         error: () => this.handleError()
+        
     });
+  }
+  handleError() {
+    console.log('mal')
+    this.form.controls.nombre.reset();
+    if (this.idioma$.idiomaSelect() == 1) {
+      alert(this.idioma$.ENG.get("nosuccesspla"));
+    } else {
+      alert(this.idioma$.ESP.get("nosuccesspla"));
+    }
   }
 
   valorarPlato() {
