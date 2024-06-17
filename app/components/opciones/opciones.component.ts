@@ -124,10 +124,19 @@ export default class OpcionesComponent {
                     this.cargarRestaurantes();
                     this.agregarRestaurante = false;
                 },
-                error: (e) => console.log(e)
+                 error: () => this.handleError()
             })
     }
 
+    handleError() {
+        console.log('mal')
+        this.formRestaurante.controls.nombre.reset();
+        if (this.idioma$.idiomaSelect() == 1) {
+          alert(this.idioma$.ENG.get("nosuccess"));
+        } else {
+          alert(this.idioma$.ESP.get("nosuccess"));
+        }
+      }
     changePassword() {
         this.usuario$.changePassword(this.usuario$.usuario()!.idUsu, String(this.formPassword.controls['password'].value)).subscribe({
             next: (data) => {
