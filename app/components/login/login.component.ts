@@ -44,7 +44,7 @@ export class LoginComponent {
               this.usuario$.usuario.set(nuevoUsuario)
               localStorage.setItem('usuario', JSON.stringify(nuevoUsuario));
                 this.router.navigateByUrl("/restaurantes");
-              
+             
 
             }
           }
