@@ -71,6 +71,8 @@ export class IdiomaService {
     this.ESP.set("upPla", "Actualizar plato");
     this.ESP.set("delRes", "Se borró el restaurante");
     this.ESP.set("delPla", "Se borró el plato");
+    this.ESP.set("nosuccess", "usuario ya registrado");
+
 
   }
 
@@ -123,6 +125,7 @@ export class IdiomaService {
     this.ENG.set("upPla", "Update dish");
     this.ENG.set("delRes", "Restaurant was deleted.");
     this.ENG.set("delPla", "Dishe was deleted.");
+    this.ENG.set("nosuccess", "user already registered");
 
   }
 
